@@ -64,6 +64,9 @@ npm test
 Chrome-based browsers redirect http requests from cache, changing an "http" request to "https",
 which causes the request to receive a 403 (Forbidden) from exchangeratesapi.io on a free API key
 
+The issue itself comes down to the combination of Chromium caching policies (HTTP Strict Transport Security),
+the use of RTK Query to cache requests, and exchangeratesio's decision to forbid https for free users, quite frustrating nevertheless.
+
 To combat this:
 Opt to use Firefox or Safari to view the app
 or procure a paid API key (not required by any feature of the app)
